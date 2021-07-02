@@ -134,7 +134,7 @@ console.log(`You lived ${yearInSecond} seconds.`);
 //      3. DD/MM/YYYY HH:mm
 
 let day = date.getDay();
-let month = date.getMonth();
+let month = date.getMonth()+1;
 let year = date.getFullYear();
 let hours = date.getHours();
 let minutes = date.getMinutes()
