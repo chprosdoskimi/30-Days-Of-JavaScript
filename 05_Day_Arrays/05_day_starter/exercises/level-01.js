@@ -42,7 +42,7 @@ const mixedDataTypes = [1,'Carlos', true, {age:25}];
 console.log(mixedDataTypes);
 
 // 6. Declare an array variable name itCompanies and assign initial values Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon
-let itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
+const itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
 
 // 7. Print the array using _console.log()_
 console.log(itCompanies);
@@ -78,7 +78,7 @@ if(itCompanies.includes(certainCompany)){
 }
 
 // 14. Filter out companies which have more than one 'o' without the filter method
-for(let i= 0; i<itCompanies.length-1; i++){
+for(let i= 0; i<itCompanies.length; i++){
   if(itCompanies[i].includes('oo')){
     console.log('The company that have more than one \'o\': ', itCompanies[i]);
   }
@@ -90,7 +90,7 @@ console.log(itCompanies.sort());
 console.log(itCompanies.reverse());
 
 // 17. Slice out the first 3 companies from the array
-console.log(itCompanies.slice(3,itCompanies.length));
+console.log('The first 3 companies: ',itCompanies.slice(3,itCompanies.length-1));
 
 // 18. Slice out the last 3 companies from the array
 console.log(itCompanies.slice(0,3));
@@ -110,4 +110,7 @@ console.log(itCompanies.pop());
 console.log(itCompanies);
 
 // 23. Remove all IT companies
-console.log(itCompanies = []);
+for(let i = 0; i<itCompanies.length; i++){
+  delete itCompanies[i];
+}
+console.log('Remove all items: ',itCompanies);
