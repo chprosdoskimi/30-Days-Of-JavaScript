@@ -1,5 +1,4 @@
 // Exercises: Level 1
-
 const countries = [
   'Albania',
   'Bolivia',
@@ -43,7 +42,7 @@ const mixedDataTypes = [1,'Carlos', true, {age:25}];
 console.log(mixedDataTypes);
 
 // 6. Declare an array variable name itCompanies and assign initial values Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon
-const itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
+let itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
 
 // 7. Print the array using _console.log()_
 console.log(itCompanies);
@@ -60,22 +59,24 @@ for(let i =0;i<itCompanies.length; i++){
 }
 
 // 11. Change each company name  to uppercase one by one and print them out
-// for(let i =0;i<itCompanies.length; i++){
-//   itCompanies[i] = itCompanies[i].toUpperCase();
-//   console.log(`${i+1}: ${itCompanies[i]}`);
-// }
+for(let i =0;i<itCompanies.length; i++){
+  itCompanies[i] = itCompanies[i].toUpperCase();
+  console.log(`${i+1}: ${itCompanies[i]}`);
+}
+
 // 12. Print the array like as a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
 let sentence = itCompanies.slice(0,6).join(', ').concat(' and ',itCompanies[6],' are big IT companies')
 console.log(sentence);
 
 // 13. Check if a certain company exists in the itCompanies array. If it exist return the company else return a company is _not found_
 let certainCompany = 'Google';
-let certainCompany = prompt('')
+// let certainCompany = prompt('Enter the company name: ');
 if(itCompanies.includes(certainCompany)){
   console.log('The company exists in array');
 }else{
   console.log('The company is not found');
 }
+
 // 14. Filter out companies which have more than one 'o' without the filter method
 for(let i= 0; i<itCompanies.length-1; i++){
   if(itCompanies[i].includes('oo')){
@@ -84,6 +85,7 @@ for(let i= 0; i<itCompanies.length-1; i++){
 }
 // 15. Sort the array using _sort()_ method
 console.log(itCompanies.sort());
+
 // 16. Reverse the array using _reverse()_ method
 console.log(itCompanies.reverse());
 
@@ -96,7 +98,16 @@ console.log(itCompanies.slice(0,3));
 // 19. Slice out the middle IT company or companies from the array
 
 // 20. Remove the first IT company from the array
+console.log(itCompanies.shift());
+console.log(itCompanies);
 
 // 21. Remove the middle IT company or companies from the array
+console.log(itCompanies);
+console.log('the middle company is: ',itCompanies.splice((itCompanies.length-1)/2,1));
+
 // 22. Remove the last IT company from the array
+console.log(itCompanies.pop());
+console.log(itCompanies);
+
 // 23. Remove all IT companies
+console.log(itCompanies = []);
