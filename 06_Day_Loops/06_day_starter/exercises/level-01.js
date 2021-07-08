@@ -26,34 +26,21 @@ const webTechs = [
 // const mernStack = ['MongoDB', 'Express', 'React', 'Node']
 
 // 1. Iterate 0 to 10 using for loop, do the same using while and do while loop
-let i = 0
-// for(let i =0;i<countries.length;i++){
-//   console.log(`${i+1}: ${countries[i]}`);
-// }
 
-// while (i < countries.length) {
-//   console.log(`${i+1}: ${countries[i]}`)
-//   i++
-// }
+for(let i =0;i<=10 ;i++){
+  console.log(i);
+}
+let i = 0;
+while (i <= 10) {
+  console.log(i)
+  i++
+}
+// let i =0;
 
-// do {
-//   console.log(`${i+1}: ${countries[i]}`)
-//   i++
-// } while (i < countries.length)
-
-// for(let i =0;i<webTechs.length;i++){
-//   console.log(`${i+1}: ${webTechs[i]}`);
-// }
-
-// while (i < webTechs.length) {
-//   console.log(`${i+1}: ${webTechs[i]}`)
-//   i++
-// }
-
-// do {
-//   console.log(`${i+1}: ${webTechs[i]}`)
-//   i++
-// } while (i < webTechs.length);
+do {
+  console.log(i)
+  i++
+} while (i <= 10);
 
 // 2. Iterate 10 to 0 using for loop, do the same using while and do while loop
 for(let i = 10;i>=0;i--){
@@ -179,7 +166,29 @@ for (let i = 0; i <= 100; i++) {
 console.log([sumEvens,sumOdds]);
 
 // 13. Develop a small script which generate array of 5 random numbers
+  // const arr =[];
+  for (let i = 0; i < 5; i++) {
+    arr[i] = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+  }
+  console.log(arr);
+
 // 14. Develop a small script which generate array of 5 random numbers and the numbers must be unique
+  // const arr =[];
+  for (let i = 0; i < 5; i++) {
+    arr[i] = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+    if(i>1){
+      if(arr[i-1]===arr[i]){
+        arr[i]= Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+      }
+    }
+  }
+  console.log(arr);
 // 15. Develop a small script which generate a six characters random id:
 
 //   5j2khz
+const arrChar = []
+for (let i = 0; i < 6; i++) {
+  let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  arrChar[i] = characters.charAt(Math.floor(Math.random() * (61 - 0 + 1)) + 0);
+}
+console.log(arrChar);
