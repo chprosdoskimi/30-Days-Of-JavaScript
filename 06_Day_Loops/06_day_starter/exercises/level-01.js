@@ -160,9 +160,9 @@ console.log([sumEvens,sumOdds]);
 // 15. Develop a small script which generate a six characters random id:
 
 //   5j2khz
-const arrChar = []
+let randomCharacter ="";
 for (let i = 0; i < 6; i++) {
   let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  arrChar[i] = characters.charAt(Math.floor(Math.random() * (61 - 0 + 1)) + 0);
+  randomCharacter = randomCharacter + characters.charAt(Math.floor(Math.random() * (61 - 0 + 1)) + 0);
 }
-console.log(arrChar);
+console.log(randomCharacter);
